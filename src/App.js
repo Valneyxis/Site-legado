@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Benefits from './components/Benefits';
+import Footer from './components/Footer';
+import Passeios from './components/Passeios';
+import Translado from './components/Translado'; // Componente de translados
+import About from './components/About'; // Componente 'Sobre Nós'
+import Sobre from './components/Sobre'; // Componente de contato
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        {/* Rota para a página inicial */}
+        <Route path="/" element={
+          <>
+            <Hero />
+            <Benefits />
+            <About />
+          </>
+        } />
+
+        {/* Rota para a página de Passeios */}
+        <Route path="/passeios" element={<Passeios />} />
+
+        {/* Rota para a página de Translado */}
+        <Route path="/translado" element={<Translado />} />
+
+        {/* Rota para a página de Contato */}
+        <Route path="/sobre" element={<Sobre />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
-}
+};
 
 export default App;

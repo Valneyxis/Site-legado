@@ -1,0 +1,99 @@
+/* src/css/About.css */
+.about {
+  padding: 60px 20px;
+  background-color: #f4f4f9; /* Cor de fundo suave */
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto; /* Centraliza o conteúdo na tela */
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.about-content {
+  flex: 2;
+  max-width: 600px;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.about-values {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.about-values li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.about-values li strong {
+  color: #ff6b6b; /* Destaque com cor vibrante */
+}
+
+.cta-button {
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ff4c4c;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+      flex-direction: column; /* Exibe o conteúdo em coluna no mobile */
+      text-align: center; /* Centraliza o texto no mobile */
+  }
+
+  .about-image {
+      margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+  }
+
+  .about-content h2 {
+      font-size: 2rem;
+  }
+
+  .about-content p {
+      font-size: 1.1rem;
+  }
+
+  .about-values li {
+      font-size: 0.95rem;
+  }
+}

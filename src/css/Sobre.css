@@ -1,0 +1,85 @@
+/* src/css/Sobre.css */
+.sobre-container {
+  padding: 60px 20px;
+  background-color: #f4f4f9; 
+}
+
+.sobre-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+
+.sobre-image {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.sobre-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.sobre-text {
+  flex: 2;
+  max-width: 600px;
+}
+
+.sobre-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff6b6b; 
+  text-align: center; 
+}
+
+.sobre-text p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.sobre-values {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.sobre-values li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.sobre-values li strong {
+  color: #ff6b6b; 
+}
+
+@media (max-width: 768px) {
+  .sobre-content {
+      flex-direction: column; 
+      text-align: center; 
+  }
+
+  .sobre-image {
+      margin-bottom: 20px; 
+  }
+
+  .sobre-text h2 {
+      font-size: 2rem;
+  }
+
+  .sobre-text p {
+      font-size: 1.1rem;
+  }
+
+  .sobre-values li {
+      font-size: 0.95rem;
+  }
+}
