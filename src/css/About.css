@@ -60,7 +60,7 @@
   color: #ff6b6b; /* Destaque com cor vibrante */
 }
 
-.cta-button {
+.about-button {
   background-color: #ff6b6b;
   color: #fff;
   border: none;
@@ -71,7 +71,7 @@
   transition: background-color 0.3s ease;
 }
 
-.cta-button:hover {
+.about-button:hover {
   background-color: #ff4c4c;
 }
 

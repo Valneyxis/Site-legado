@@ -33,7 +33,7 @@
   margin-bottom: 20px;
 }
 
-.cta-button {
+.page-button {
   padding: 15px 30px;
   font-size: 1.2rem;
   background-color: #ff6b6b;
@@ -43,7 +43,7 @@
   transition: background-color 0.3s ease;
 }
 
-.cta-button:hover {
+.page-button:hover {
   background-color: #ff4c4c;
 }
 
@@ -57,7 +57,7 @@
     font-size: 1rem;
   }
 
-  .cta-button {
+  .page-button {
     padding: 10px 20px;
     font-size: 1rem;
   }

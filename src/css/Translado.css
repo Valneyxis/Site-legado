@@ -24,7 +24,7 @@
     display: inline-block;
     margin-top: 30px;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #ff6b6b;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -32,7 +32,7 @@
   }
   
   .translado-container a:hover {
-    background-color: #0056b3;
+    background-color: #ff4c4c;
   }
 
   .card-text {
@@ -44,5 +44,5 @@
   
   .card-text svg {
     margin-right: 8px;
-    color: #007BFF; /* Cor do ícone */
+    color: #ff6b6b; /* Cor do ícone */
   }

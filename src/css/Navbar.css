@@ -39,10 +39,10 @@
 }
 
 .nav-links a:hover {
-  color: #2980b9; 
+  color: #ff4c4c; 
 }
 
-.cta-button {
+.navbar-button {
   background-color: #ff6b6b; 
   color: white; 
   border: none;
@@ -54,7 +54,7 @@
   transition: background-color 0.3s ease, transform 0.2s ease; 
 }
 
-.cta-button:hover {
+.navbar-button:hover {
   background-color: #ff4c4c; 
   transform: scale(1.05); 
 }
@@ -77,9 +77,12 @@
     margin-bottom: 10px;
   }
 
-  .cta-button {
+  .navbar-button {
     margin-top: 15px; 
     width: 100%; 
     text-align: center;
   }
+  
 }
+
+

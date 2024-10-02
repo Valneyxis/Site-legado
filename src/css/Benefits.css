@@ -18,7 +18,7 @@
 .benefit-section h3 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #2980b9; 
+  color: #ff4c4c; 
 }
 
 .benefit-cards {
@@ -61,7 +61,7 @@
   color: #7f8c8d; 
 }
 
-.cta-button {
+.benefit-button {
   display: inline-block;
   padding: 12px 25px; 
   font-size: 1rem;
@@ -71,9 +71,10 @@
   border-radius: 25px; 
   margin-bottom: 20px;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
 }
 
-.cta-button:hover {
+.benefit-button:hover {
   background-color: #ff4c4c;
   transform: scale(1.05); 
 }

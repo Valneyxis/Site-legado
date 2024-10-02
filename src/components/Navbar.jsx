@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom'; // Importando NavLink do react-router-dom
+import { NavLink } from 'react-router-dom'; 
 import '../css/Navbar.css';
 
 const Navbar = () => {
@@ -11,12 +11,48 @@ const Navbar = () => {
         </NavLink>
       </div>
       <ul className="nav-links">
-        <li><NavLink to="/" activeClassName="active-link">Home</NavLink></li>
-        <li><NavLink to="/translado" activeClassName="active-link">Translado</NavLink></li>
-        <li><NavLink to="/passeios" activeClassName="active-link">Passeios</NavLink></li>
-        <li><NavLink to="/sobre" activeClassName="active-link">Sobre</NavLink></li>
+        <li>
+          <NavLink 
+            to="/" 
+            className={({ isActive }) => (isActive ? "active-link" : "")}
+          >
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/translado" 
+            className={({ isActive }) => (isActive ? "active-link" : "")}
+          >
+            Translado
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/passeios" 
+            className={({ isActive }) => (isActive ? "active-link" : "")}
+          >
+            Passeios
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/sobre" 
+            className={({ isActive }) => (isActive ? "active-link" : "")}
+          >
+            Sobre
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/contato" 
+            className={({ isActive }) => (isActive ? "active-link" : "")}
+          >
+            Contato
+          </NavLink>
+        </li>
       </ul>
-      <button className="cta-button">Reservar</button>
+      <button className="navbar-button">Reservar</button>
     </nav>
   );
 };

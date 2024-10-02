@@ -3,7 +3,7 @@ import '../css/About.css';
 
 const About = () => {
   return (
-    <section className="about" id="about">
+    <section className="about" id="about" data-aos="fade-up">
       <div className="about-container">
         <div className="about-image">
           <img src="/img/men.jpg" alt="Sobre nós" />
@@ -18,7 +18,7 @@ const About = () => {
             <li><strong>Qualidade</strong>: Serviços de excelência com foco na satisfação do cliente.</li>
             <li><strong>Segurança</strong>: Prioridade em cada etapa do seu passeio ou translado.</li>
           </ul>
-          <button className="cta-button">Saiba mais</button>
+          <button className="about-button">Saiba mais</button>
         </div>
       </div>
     </section>

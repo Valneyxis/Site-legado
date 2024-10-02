@@ -18,7 +18,7 @@ const Translado = () => {
             <p className="card-text"><FaUserFriends /> Capacidade: 04 pessoas</p>
             <a 
               href="https://api.whatsapp.com/send/?phone=5588981692600&text&type=phone_number&app_absent=0"
-              className="cta-button" 
+              className="page-button" 
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -36,7 +36,7 @@ const Translado = () => {
             <p className="card-text"><FaUserFriends /> Capacidade: 04 pessoas</p>
             <a 
               href="https://api.whatsapp.com/send/?phone=5588981692600&text&type=phone_number&app_absent=0"
-              className="cta-button" 
+              className="page-button" 
               target="_blank"
               rel="noopener noreferrer"
             >

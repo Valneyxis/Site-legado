@@ -24,6 +24,7 @@ const Sobre = () => {
             Nosso diferencial é a proximidade com nossos clientes, entendendo e atendendo seus 
             desejos de forma única e exclusiva.
           </p>
+          <h3>Nossos Valores</h3>
           <ul className="sobre-values">
             <li><strong>Experiência:</strong> Mais de 10 anos no mercado, com conhecimento aprofundado na região.</li>
             <li><strong>Qualidade:</strong> Excelência nos serviços, priorizando o conforto e a satisfação dos clientes.</li>

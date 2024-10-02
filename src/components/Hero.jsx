@@ -5,7 +5,7 @@ import '../css/Hero.css';
 
 const Hero = () => {
   return (
-    <section className="hero">
+    <section className="hero" data-aos="fade-up">
       <Carousel
         showArrows={true}
         autoPlay={true}
