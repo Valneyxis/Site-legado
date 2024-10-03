@@ -12,10 +12,10 @@ const Footer = () => {
           <p>Email: contact@mycompany.com</p>
         </div>
         <div className="social-links">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/valney-rodrigues-b135b1166/" target="_blank" rel="noopener noreferrer">
             <FaFacebook className="social-icon" />
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/valneyrodrigues_/" target="_blank" rel="noopener noreferrer">
             <FaInstagram className="social-icon" />
           </a>
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
@@ -23,7 +23,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <p className="footer-rights">&copy; 2024 MyCompany. All rights reserved.</p>
+      <p className="footer-rights">&copy; 2024 ValneyRodrigues. All rights reserved.</p>
     </footer>
   );
 };

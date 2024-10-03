@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom'; 
 import '../css/Navbar.css';
+import { FaBars, FaTimes } from 'react-icons/fa'; // Importando ícones de menu
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar o menu
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav className="navbar">
       <div className="logo">
@@ -10,7 +17,10 @@ const Navbar = () => {
           <img src="/img/logo.png" alt="Logo" />
         </NavLink>
       </div>
-      <ul className="nav-links">
+      <button className="menu-toggle" onClick={toggleMenu}>
+        {isMenuOpen ? <FaTimes /> : <FaBars />} {/* Ícone do menu */}
+      </button>
+      <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
         <li>
           <NavLink 
             to="/" 

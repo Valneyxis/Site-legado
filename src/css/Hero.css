@@ -1,64 +1,82 @@
-/* src/components/Hero.css */
+/* Hero.css */
+
+/* Estilo geral */
 .hero {
   position: relative;
   width: 100%;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f4f4f4;
+  height: 70vh; /* Altura padrão */
+  overflow: hidden;
+  margin-top: 30px;
 }
 
-.carousel .slide img {
+.swiper {
   width: 100%;
-  height: 80vh;
+  height: 100%;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
 }
 
-.carousel .legend {
-  position: absolute;
-  bottom: 50px;
-  left: 50px;
-  color: white;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+.carousel-image:hover {
+  transform: scale(1.05);
 }
 
-.carousel .legend h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff;
+  z-index: 10;
 }
 
-.carousel .legend p {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+.swiper-pagination {
+  bottom: 10px;
 }
 
-.page-button {
-  padding: 15px 30px;
-  font-size: 1.2rem;
-  background-color: #ff6b6b;
-  border: none;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.swiper-pagination-bullet {
+  background: #ff6b6b;
 }
 
-.page-button:hover {
-  background-color: #ff4c4c;
+.swiper-pagination-bullet-active {
+  background: #ff4c4c;
 }
 
-/* responsividade */
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+  .hero {
+    height: 50vh; /* Altura menor para telas médias */
+  }
+}
+
 @media (max-width: 768px) {
-  .carousel .legend h1 {
-    font-size: 2rem;
+  .hero {
+    height: 40vh; /* Altura ainda menor para dispositivos móveis */
   }
 
-  .carousel .legend p {
-    font-size: 1rem;
+  .carousel-image {
+    border-radius: 5px; /* Bordas arredondadas menores para dispositivos móveis */
   }
 
-  .page-button {
-    padding: 10px 20px;
-    font-size: 1rem;
+  .swiper-button-next,
+  .swiper-button-prev {
+    font-size: 18px; /* Tamanho menor dos botões de navegação */
+  }
+
+  .swiper-pagination {
+    bottom: 5px; /* Ajusta a posição dos bullets para telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 30vh; /* Altura ainda menor para telas pequenas */
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    font-size: 16px; /* Tamanho ainda menor dos botões de navegação */
   }
 }

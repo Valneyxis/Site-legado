@@ -1,88 +1,90 @@
-/* src/components/Navbar.css */
+/* Navbar.css */
+
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 15px 30px; 
-  background-color: #ffffff; 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  justify-content: space-between;
+  padding: 10px 20px; /* Ajuste o preenchimento conforme necessário */
+  background-color: #f4f4f4; /* Cor de fundo da navbar */
+  position: relative;
 }
 
 .logo img {
-  width: 80px; /* Ajuste para um tamanho mais pequeno e minimalista */
-  height: auto; /* Mantém a proporção da imagem */
-  object-fit: contain; /* Garante que a imagem fique contida no tamanho definido */
-  transition: transform 0.3s ease;
-  border-radius: 50px; /* Adiciona uma transição suave ao hover */
+  width: 60px; /* Ajuste o tamanho da logo */
+  border-radius: 50px;
 }
-
-.logo img:hover {
-  transform: scale(1.05); /* Um leve aumento no hover para um efeito interativo */
-}
-
 
 .nav-links {
+  list-style: none;
   display: flex;
-  list-style: none; 
-  margin-left: auto; 
+  gap: 20px; /* Espaçamento entre os links */
 }
 
 .nav-links li {
-  margin-left: 30px; 
+  display: inline-block;
 }
 
 .nav-links a {
-  text-decoration: none; 
-  color: #34495e;
-  font-weight: 500; 
-  transition: color 0.3s ease; 
+  color: #333;
+  text-decoration: none;
 }
 
-.nav-links a:hover {
-  color: #ff4c4c; 
+.active-link {
+  font-weight: bold;
 }
 
 .navbar-button {
-  background-color: #ff6b6b; 
-  color: white; 
+  background-color: #ff6b6b; /* Cor do botão "Reservar" */
+  color: #fff;
   border: none;
-  border-radius: 25px; 
-  padding: 10px 20px; 
-  font-size: 1rem; 
-  cursor: pointer; 
-  margin-left: 30px; 
-  transition: background-color 0.3s ease, transform 0.2s ease; 
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.navbar-button:hover {
-  background-color: #ff4c4c; 
-  transform: scale(1.05); 
+/* Estilos para o menu hamburguer */
+.menu-toggle {
+  display: none; /* Oculta o botão no desktop */
+  background: transparent;
+  border: none;
+  color: #333;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .nav-links {
-    margin-left: 0;
-    flex-direction: column;
-    width: 100%;
+    display: none; /* Esconde os links por padrão */
+    flex-direction: column; /* Coloca os links em coluna */
+    align-items: center;
+    position: absolute;
+    top: 40px; /* Abaixo da navbar */
+    left: 0;
+    right: 0;
+    background-color: #f4f4f4; /* Cor de fundo da navbar */
+    padding: 10px 0; /* Preenchimento superior e inferior */
+    z-index: 100; /* Coloca os links acima de outros elementos */
   }
 
-  .nav-links li {
-    margin-left: 0;
-    margin-bottom: 10px;
+  .nav-links a {
+    padding: 30px;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex; /* Mostra os links quando o menu está aberto */
+  }
+
+  .menu-toggle {
+    display: block; /* Mostra o botão no mobile */
   }
 
   .navbar-button {
-    margin-top: 15px; 
-    width: 100%; 
-    text-align: center;
+    display: none;
   }
-  
+
+  .logo img {
+    width: 40px;
+  }
 }
-
-

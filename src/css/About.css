@@ -1,99 +1,89 @@
-/* src/css/About.css */
+/* About.css */
+
 .about {
-  padding: 60px 20px;
-  background-color: #f4f4f9; /* Cor de fundo suave */
+  padding: 40px 20px; /* Ajuste o preenchimento conforme necessário */
 }
 
 .about-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto; /* Centraliza o conteúdo na tela */
+  max-width: 1200px; /* Limite de largura */
+  margin: 0 auto;
 }
 
 .about-image {
-  flex: 1;
-  min-width: 300px;
-  max-width: 500px;
+  flex: 1; /* Ocupa uma fração do espaço disponível */
+  padding: 10px; /* Adiciona um preenchimento */
 }
 
 .about-image img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  width: 80%; /* A imagem ocupa 80% do contêiner */
+  max-width: 400px; /* Limita a largura máxima da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 8px; /* Bordas arredondadas */
 }
 
 .about-content {
-  flex: 2;
-  max-width: 600px;
+  flex: 1; /* Ocupa uma fração do espaço disponível */
+  padding: 10px; /* Adiciona um preenchimento */
 }
 
 .about-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #333;
+  font-size: 2rem; /* Tamanho do título */
+  margin-bottom: 15px; /* Espaçamento abaixo do título */
 }
 
 .about-content p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  color: #666;
-  line-height: 1.6;
-}
-
-.about-values {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 30px;
-}
-
-.about-values li {
-  font-size: 1rem;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.about-values li strong {
-  color: #ff6b6b; /* Destaque com cor vibrante */
+  font-size: 1rem; /* Tamanho da fonte do parágrafo */
+  line-height: 1.6; /* Aumenta a altura da linha para melhor legibilidade */
+  margin-bottom: 15px; /* Espaçamento abaixo do parágrafo */
 }
 
 .about-button {
-  background-color: #ff6b6b;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 12px 25px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  display: inline-block; /* Permite adicionar margem e definir a largura */
+  padding: 10px 20px; /* Preenchimento do botão */
+  background-color: #ff6b6b; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  text-decoration: none; /* Remove o sublinhado do link */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+  transition: background-color 0.3s; /* Transição suave para a cor de fundo */
 }
 
 .about-button:hover {
-  background-color: #ff4c4c;
+  background-color: #ff4c4c; /* Cor de fundo ao passar o mouse */
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
   .about-container {
-      flex-direction: column; /* Exibe o conteúdo em coluna no mobile */
-      text-align: center; /* Centraliza o texto no mobile */
+    flex-direction: column; /* Coloca os elementos em coluna */
+    align-items: center; /* Centraliza o conteúdo */
+    padding: 0 10px; /* Adiciona preenchimento lateral */
   }
 
   .about-image {
-      margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+    margin-bottom: 7px; /* Espaçamento entre imagem e conteúdo */
+    width: 100%; /* A imagem ocupa 100% da largura no mobile */
+    margin-left: 70px;
+  }
+
+  .about-content {
+    text-align: center; /* Centraliza o texto */
   }
 
   .about-content h2 {
-      font-size: 2rem;
+    font-size: 1.5rem; /* Tamanho do título no mobile */
   }
 
   .about-content p {
-      font-size: 1.1rem;
+    font-size: 0.9rem; /* Tamanho da fonte do parágrafo no mobile */
+    line-height: 1.4; /* Ajusta a altura da linha para melhor legibilidade */
   }
 
-  .about-values li {
-      font-size: 0.95rem;
+  .about-button {
+    width: 80%; /* O botão ocupa 100% da largura no mobile */
+    font-size: 1rem; /* Tamanho da fonte do botão no mobile */
   }
 }
