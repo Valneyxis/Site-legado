@@ -1,6 +1,6 @@
 // src/components/Sobre.js
 import React from 'react';
-import '../css/Sobre.css'; // Estilização específica para a página Sobre
+import '../css/Sobre.css'; 
 
 const Sobre = () => {
   return (

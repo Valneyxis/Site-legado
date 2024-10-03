@@ -4,20 +4,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px; /* Ajuste o preenchimento conforme necessário */
-  background-color: #f4f4f4; /* Cor de fundo da navbar */
+  padding: 10px 20px;
+  background-color: #f4f4f4; 
   position: relative;
 }
 
 .logo img {
-  width: 60px; /* Ajuste o tamanho da logo */
+  width: 60px; 
   border-radius: 50px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px; /* Espaçamento entre os links */
+  gap: 20px; 
 }
 
 .nav-links li {
@@ -34,7 +34,7 @@
 }
 
 .navbar-button {
-  background-color: #ff6b6b; /* Cor do botão "Reservar" */
+  background-color: #ff6b6b; 
   color: #fff;
   border: none;
   padding: 10px 15px;
@@ -44,7 +44,7 @@
 
 /* Estilos para o menu hamburguer */
 .menu-toggle {
-  display: none; /* Oculta o botão no desktop */
+  display: none;
   background: transparent;
   border: none;
   color: #333;
@@ -55,16 +55,16 @@
 /* Responsividade */
 @media (max-width: 768px) {
   .nav-links {
-    display: none; /* Esconde os links por padrão */
-    flex-direction: column; /* Coloca os links em coluna */
+    display: none; 
+    flex-direction: column; 
     align-items: center;
     position: absolute;
-    top: 40px; /* Abaixo da navbar */
+    top: 40px; 
     left: 0;
     right: 0;
-    background-color: #f4f4f4; /* Cor de fundo da navbar */
-    padding: 10px 0; /* Preenchimento superior e inferior */
-    z-index: 100; /* Coloca os links acima de outros elementos */
+    background-color: #f4f4f4;
+    padding: 10px 0; 
+    z-index: 100; 
   }
 
   .nav-links a {
@@ -73,11 +73,11 @@
   }
 
   .nav-links.active {
-    display: flex; /* Mostra os links quando o menu está aberto */
+    display: flex; 
   }
 
   .menu-toggle {
-    display: block; /* Mostra o botão no mobile */
+    display: block; 
   }
 
   .navbar-button {

@@ -1,0 +1,36 @@
+.not-found-container {
+    text-align: center;
+    padding: 50px;
+    color: #333;
+  }
+  
+  .not-found-container h1 {
+    font-size: 5rem;
+    color: #ff6347; /* Tomate, cor destacada */
+  }
+  
+  .not-found-container h2 {
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+  
+  .not-found-container p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff6347; /* Azul */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-button:hover {
+    background-color: #ff4c4c; /* Azul mais escuro */
+  }
+  

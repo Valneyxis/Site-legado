@@ -48,8 +48,7 @@ const ContactForm = () => {
     if (Object.keys(newErrors).length === 0) {
       setFormSubmitted(true);
       console.log('Formulário enviado:', formData);
-      // Aqui você pode implementar o envio dos dados ao backend
-      // await sendDataToBackend(formData); // Exemplo de função para enviar dados
+
       resetForm();
     }
   };
@@ -127,7 +126,7 @@ const ContactForm = () => {
                   onClick={() => handleRating(star)}
                   role="button"
                   tabIndex={0}
-                  onKeyPress={() => handleRating(star)} // Permitir interação por teclado
+                  onKeyPress={() => handleRating(star)} 
                 >
                   ★
                 </span>

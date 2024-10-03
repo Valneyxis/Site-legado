@@ -1,32 +1,32 @@
 /* ContactForm.css */
 .contact-form {
-  width: 90%; /* Aumenta a largura em mobile */
-  max-width: 400px; /* Limita a largura máxima para não ficar muito grande */
+  width: 90%; 
+  max-width: 400px; 
   margin: 0 auto;
   background-color: #f9f9f9; 
-  padding: 15px; /* Reduz o preenchimento */
+  padding: 15px; 
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra mais sutil */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
   font-family: 'Open Sans', sans-serif;
   color: #333;
 }
 
 .contact-form h2 {
-  margin-bottom: 10px; /* Reduz a margem inferior */
-  font-size: 1.5rem; /* Tamanho da fonte menor */
+  margin-bottom: 10px; 
+  font-size: 1.5rem; 
   font-weight: 600;
   text-align: center;
   color: #333;
 }
 
 .form-group {
-  margin-bottom: 10px; /* Reduz a margem inferior */
+  margin-bottom: 10px; 
   display: flex;
   flex-direction: column;
 }
 
 .form-group label {
-  font-size: 0.9rem; /* Reduz o tamanho da fonte */
+  font-size: 0.9rem; 
   font-weight: 500;
   margin-bottom: 5px;
   color: #666;
@@ -34,12 +34,12 @@
 
 .form-group input,
 .form-group textarea {
-  width: 95%; /* Usa toda a largura disponível */
-  padding: 10px; /* Reduz o preenchimento */
+  width: 95%; 
+  padding: 10px; 
   border: 1px solid #ddd; 
   border-radius: 6px;
   background-color: #fff;
-  font-size: 0.9rem; /* Reduz o tamanho da fonte */
+  font-size: 0.9rem; 
   color: #333;
   transition: border-color 0.2s ease;
 }
@@ -52,7 +52,7 @@
 
 .form-group textarea {
   resize: vertical;
-  min-height: 100px; /* Reduz a altura mínima */
+  min-height: 100px; 
 }
 
 .form-group input.error-input,
@@ -63,17 +63,17 @@
 
 .error-text {
   color: #e74c3c;
-  font-size: 0.8rem; /* Reduz o tamanho da fonte */
+  font-size: 0.8rem; 
 }
 
 .rating {
   display: flex;
   justify-content: center;
-  margin-bottom: 15px; /* Reduz a margem inferior */
+  margin-bottom: 15px; 
 }
 
 .star {
-  font-size: 1.5rem; /* Reduz o tamanho da estrela */
+  font-size: 1.5rem; 
   cursor: pointer;
   color: #ddd; 
   transition: color 0.2s ease;
@@ -90,13 +90,13 @@
 .submit-button {
   background-color: #ff6b6b;
   color: #fff;
-  padding: 10px 0; /* Reduz o preenchimento */
+  padding: 10px 0; 
   border: none;
   border-radius: 8px;
-  font-size: 0.9rem; /* Reduz o tamanho da fonte */
+  font-size: 0.9rem; 
   cursor: pointer;
   text-align: center;
-  width: 100%; /* Usa toda a largura */
+  width: 100%; 
   transition: background-color 0.2s ease;
 }
 
@@ -111,24 +111,24 @@
 .success-message {
   text-align: center;
   color: #ff4c4c;
-  font-size: 1rem; /* Reduz o tamanho da fonte */
+  font-size: 1rem; 
   background-color: #f1f1f1;
-  padding: 10px; /* Reduz o preenchimento */
+  padding: 10px; 
   border-radius: 8px;
-  margin-top: 15px; /* Reduz a margem superior */
+  margin-top: 15px; 
 }
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
   .contact-form {
-    padding: 10px; /* Reduz o preenchimento para mobile */
+    padding: 10px; 
   }
 
   .submit-button {
-    padding: 8px; /* Reduz o preenchimento do botão */
+    padding: 8px; 
   }
 
   .rating .star {
-    font-size: 1.5rem; /* Ajusta o tamanho da estrela */
+    font-size: 1.5rem; 
   }
 }

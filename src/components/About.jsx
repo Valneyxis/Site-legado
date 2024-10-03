@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/About.css';
-import { NavLink } from 'react-router-dom'; // Importe o NavLink
+import { NavLink } from 'react-router-dom'; 
 
 const About = () => {
   return (
@@ -17,7 +17,7 @@ const About = () => {
           <p>
             Priorizamos um atendimento de alta qualidade, garantindo que cada momento da sua jornada seja especial.
           </p>
-          <NavLink to="/sobre" className="about-button">Saiba mais</NavLink> {/* Use NavLink */}
+          <NavLink to="/sobre" className="about-button">Saiba mais</NavLink> 
         </div>
       </div>
     </section>

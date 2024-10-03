@@ -6,7 +6,7 @@
 
 .sobre-container h2 {
   font-size: 2.5rem;
-  margin: 20px 0 10px; /* Ajuste a margem para cima */
+  margin: 20px 0 10px; 
   color: #ff6b6b; 
   text-align: center; 
 }
@@ -26,11 +26,11 @@
   flex: 1;
   min-width: 300px;
   max-width: 500px;
-  transition: transform 0.3s; /* Adiciona transição ao hover */
+  transition: transform 0.3s; 
 }
 
 .sobre-image:hover {
-  transform: scale(1.05); /* Efeito de hover */
+  transform: scale(1.05); 
 }
 
 .sobre-image img {
@@ -49,11 +49,11 @@
   margin-bottom: 20px;
   color: #ff6b6b; 
   text-align: center; 
-  transition: color 0.3s; /* Adiciona transição ao hover */
+  transition: color 0.3s; 
 }
 
 .sobre-text h2:hover {
-  color: #e53e3e; /* Altera a cor ao passar o mouse */
+  color: #e53e3e; 
 }
 
 .sobre-text p {

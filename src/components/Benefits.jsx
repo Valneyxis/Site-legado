@@ -19,7 +19,7 @@ const Benefits = () => {
             <p className="card-text"><FaClock /> Guia Turístico</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 09 pessoas</p>
             <a 
-              href="#"
+              href="https://wa.me/SEU_NUMERO?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva."
               className="benefit-button" 
               target="_blank"
               rel="noopener noreferrer"
@@ -36,7 +36,7 @@ const Benefits = () => {
             <p className="card-text"><FaClock /> Guia Turístico</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 09 pessoas</p>
             <a 
-              href="#"
+              href="https://wa.me/SEU_NUMERO?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva."
               className="benefit-button" 
               target="_blank"
               rel="noopener noreferrer"
@@ -53,7 +53,7 @@ const Benefits = () => {
             <p className="card-text"><FaClock /> Guia Turístico</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 09 pessoas</p>
             <a 
-              href="#"
+              href="https://wa.me/SEU_NUMERO?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva."
               className="benefit-button" 
               target="_blank"
               rel="noopener noreferrer"
@@ -76,7 +76,7 @@ const Benefits = () => {
             <p className="card-text"><FaClock /> Motorista Experiente</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 04 pessoas</p>
             <a 
-              href="#"
+              href="https://wa.me/SEU_NUMERO?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva."
               className="benefit-button" 
               target="_blank"
               rel="noopener noreferrer"
@@ -93,7 +93,7 @@ const Benefits = () => {
             <p className="card-text"><FaClock /> Motorista Experiente</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 04 pessoas</p>
             <a 
-              href="#"
+              href="https://wa.me/SEU_NUMERO?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva."
               className="benefit-button" 
               target="_blank"
               rel="noopener noreferrer"
@@ -110,7 +110,7 @@ const Benefits = () => {
             <p className="card-text"><FaClock /> Motorista Experiente</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 04 pessoas</p>
             <a 
-              href="#"
+              href="https://wa.me/SEU_NUMERO?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva."
               className="benefit-button" 
               target="_blank"
               rel="noopener noreferrer"

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom'; 
 import '../css/Navbar.css';
-import { FaBars, FaTimes } from 'react-icons/fa'; // Importando ícones de menu
+import { FaBars, FaTimes } from 'react-icons/fa'; 
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar o menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false); 
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -18,7 +18,7 @@ const Navbar = () => {
         </NavLink>
       </div>
       <button className="menu-toggle" onClick={toggleMenu}>
-        {isMenuOpen ? <FaTimes /> : <FaBars />} {/* Ícone do menu */}
+        {isMenuOpen ? <FaTimes /> : <FaBars />} 
       </button>
       <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
         <li>
@@ -65,7 +65,13 @@ const Navbar = () => {
           </NavLink>
         </li>
       </ul>
-      <button className="navbar-button">Reservar</button>
+      <a 
+        href="https://wa.me/SEU_NUMERO?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva." 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        <button className="navbar-button">Reservar</button>
+      </a>
     </nav>
   );
 };

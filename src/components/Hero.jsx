@@ -1,10 +1,8 @@
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react'; // Importando Swiper e SwiperSlide
-import { Navigation, Pagination, Autoplay } from 'swiper/modules'; // Importando módulos necessários
-import 'swiper/swiper-bundle.css'; // Importando estilos do Swiper
+import { Swiper, SwiperSlide } from 'swiper/react'; 
+import { Navigation, Pagination, Autoplay } from 'swiper/modules'; 
+import 'swiper/swiper-bundle.css'; 
 import '../css/Hero.css';
-
-// Importando estilos adicionais do Swiper
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
