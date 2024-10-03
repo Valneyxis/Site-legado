@@ -28,7 +28,7 @@ const Sobre = () => {
           <ul className="sobre-values">
             <li><strong>Experiência:</strong> Mais de 10 anos no mercado, com conhecimento aprofundado na região.</li>
             <li><strong>Qualidade:</strong> Excelência nos serviços, priorizando o conforto e a satisfação dos clientes.</li>
-            <li><strong>Segurança:</strong> Nossas operações garantem total segurança em cada traslado ou passeio.</li>
+            <li><strong>Segurança:</strong> Nossas operações garantem total segurança em cada translado ou passeio.</li>
           </ul>
         </div>
       </div>
