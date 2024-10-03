@@ -7,6 +7,7 @@
   padding: 10px 20px;
   background-color: #f4f4f4; 
   position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .logo img {
@@ -27,6 +28,12 @@
 .nav-links a {
   color: #333;
   text-decoration: none;
+  padding: 5px 10px; 
+  transition: color 0.3s; 
+}
+
+.nav-links a:hover {
+  color: #ff6b6b; 
 }
 
 .active-link {
@@ -40,9 +47,13 @@
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s; 
 }
 
-/* Estilos para o menu hamburguer */
+.navbar-button:hover {
+  background-color: #ff4c4c; 
+}
+
 .menu-toggle {
   display: none;
   background: transparent;
@@ -65,11 +76,13 @@
     background-color: #f4f4f4;
     padding: 10px 0; 
     z-index: 100; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
   }
 
   .nav-links a {
-    padding: 30px;
+    padding: 15px; 
     text-align: center;
+    width: 100%; 
   }
 
   .nav-links.active {
@@ -78,10 +91,13 @@
 
   .menu-toggle {
     display: block; 
+    margin-left: auto;
+
   }
 
   .navbar-button {
-    display: none;
+    display: none; 
+
   }
 
   .logo img {

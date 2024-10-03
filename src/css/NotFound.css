@@ -6,7 +6,7 @@
   
   .not-found-container h1 {
     font-size: 5rem;
-    color: #ff6347; /* Tomate, cor destacada */
+    color: #ff6347; 
   }
   
   .not-found-container h2 {
@@ -24,13 +24,13 @@
     padding: 10px 20px;
     font-size: 1rem;
     color: #fff;
-    background-color: #ff6347; /* Azul */
+    background-color: #ff6347; 
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
   }
   
   .home-button:hover {
-    background-color: #ff4c4c; /* Azul mais escuro */
+    background-color: #ff4c4c; 
   }
   

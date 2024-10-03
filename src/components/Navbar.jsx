@@ -10,6 +10,10 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false); // Fecha o menu
+  };
+
   return (
     <nav className="navbar">
       <div className="logo">
@@ -25,6 +29,7 @@ const Navbar = () => {
           <NavLink 
             to="/" 
             className={({ isActive }) => (isActive ? "active-link" : "")}
+            onClick={closeMenu} // Fecha o menu ao clicar
           >
             Home
           </NavLink>
@@ -34,6 +39,7 @@ const Navbar = () => {
           <NavLink 
             to="/passeios" 
             className={({ isActive }) => (isActive ? "active-link" : "")}
+            onClick={closeMenu} // Fecha o menu ao clicar
           >
             Passeios
           </NavLink>
@@ -43,6 +49,7 @@ const Navbar = () => {
           <NavLink 
             to="/translado" 
             className={({ isActive }) => (isActive ? "active-link" : "")}
+            onClick={closeMenu} // Fecha o menu ao clicar
           >
             Translado
           </NavLink>
@@ -52,6 +59,7 @@ const Navbar = () => {
           <NavLink 
             to="/sobre" 
             className={({ isActive }) => (isActive ? "active-link" : "")}
+            onClick={closeMenu} // Fecha o menu ao clicar
           >
             Sobre
           </NavLink>
@@ -60,6 +68,7 @@ const Navbar = () => {
           <NavLink 
             to="/contato" 
             className={({ isActive }) => (isActive ? "active-link" : "")}
+            onClick={closeMenu} // Fecha o menu ao clicar
           >
             Contato
           </NavLink>

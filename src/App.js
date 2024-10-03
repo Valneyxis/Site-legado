@@ -27,7 +27,6 @@ const App = () => {
     <Router>
       <Navbar />
       <Routes>
-        {/* Rota para a página inicial */}
         <Route path="/" element={
           <>
             <Hero />
@@ -36,19 +35,14 @@ const App = () => {
           </>
         } />
 
-        {/* Rota para a página de Passeios */}
         <Route path="/passeios" element={<Passeios />} />
 
-        {/* Rota para a página de Translado */}
         <Route path="/translado" element={<Translado />} />
 
-        {/* Rota para a página Sobre */}
         <Route path="/sobre" element={<Sobre />} />
 
-        {/* Rota para a página de Contato */}
         <Route path="/contato" element={<ContactForm />} />
 
-        {/* Rota 404 */}
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
