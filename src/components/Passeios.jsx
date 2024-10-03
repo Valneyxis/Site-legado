@@ -10,14 +10,52 @@ const Passeios = () => {
       <p>Explore os passeios que oferecemos para você aproveitar ao máximo.</p>
       <div className="cards-container">
         <div className="card">
-          <img src="/img/passeio.jpg" alt="Passeio 1" />
+          <img src="/img/passeio1.jpg" alt="Passeio 1" />
           <div className="card-body">
-            <h4 className="card-title">Beach Adventure</h4>
+            <h4 className="card-title">Passeio Leste</h4>
             <p className="card-text"><FaShuttleVan /> Passeios Turísticos</p>
             <p className="card-text"><FaClock /> Guia Turístico</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 09 pessoas</p>
             <a 
-              href="#"
+              href=""
+              className="page-button" 
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Reserve agora
+            </a>
+          </div>
+        </div>
+
+        <div className="card">
+          <img src="/img/passeio2.jpg" alt="Passeio 2" />
+          <div className="card-body">
+            <h4 className="card-title">Passeio Extremo Leste</h4>
+            <p className="card-text"><FaShuttleVan /> Passeios de Aventura</p>
+            <p className="card-text"><FaClock /> Guia Turístico</p>
+            <p className="card-text"><FaUserFriends /> Capacidade: 9 pessoas</p>
+            <a 
+              href=""
+              className="page-button" 
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Reserve agora
+            </a>
+          </div>
+        </div>
+
+        {/* Adicione mais 4 cards como este */}
+
+        <div className="card">
+          <img src="/img/passeio3.jpg" alt="Passeio 2" />
+          <div className="card-body">
+            <h4 className="card-title">Passeio Oeste</h4>
+            <p className="card-text"><FaShuttleVan /> Passeios de Aventura</p>
+            <p className="card-text"><FaClock /> Guia Turístico</p>
+            <p className="card-text"><FaUserFriends /> Capacidade: 9 pessoas</p>
+            <a 
+              href=""
               className="page-button" 
               target="_blank"
               rel="noopener noreferrer"
@@ -30,12 +68,12 @@ const Passeios = () => {
         <div className="card">
           <img src="/img/passeio.jpg" alt="Passeio 2" />
           <div className="card-body">
-            <h4 className="card-title">Desert Safari</h4>
+            <h4 className="card-title">Personalizado</h4>
             <p className="card-text"><FaShuttleVan /> Passeios de Aventura</p>
-            <p className="card-text"><FaClock /> Guia Especializado</p>
+            <p className="card-text"><FaClock /> Guia Turístico</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 12 pessoas</p>
             <a 
-              href="#"
+              href=""
               className="page-button" 
               target="_blank"
               rel="noopener noreferrer"
@@ -45,7 +83,6 @@ const Passeios = () => {
           </div>
         </div>
 
-        {/* Adicione mais 4 cards como este */}
       </div>
     </div>
   );

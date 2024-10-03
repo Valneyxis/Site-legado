@@ -27,7 +27,7 @@ const Hero = () => {
         loop={true} 
       >
         <SwiperSlide>
-          <img src="/img/foto1.jpg" alt="Banner 1" className="carousel-image" />
+          <img src="/img/foto1.jpeg" alt="Banner 1" className="carousel-image" />
         </SwiperSlide>
         <SwiperSlide>
           <img src="/img/foto2.jpg" alt="Banner 2" className="carousel-image" />

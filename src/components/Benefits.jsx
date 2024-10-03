@@ -12,9 +12,9 @@ const Benefits = () => {
         <h3>Passeios</h3>
         <div className="benefit-cards">
         <div className="card">
-          <img src="/img/passeio.jpg" alt="Passeio 1" />
+          <img src="/img/passeio1.jpg" alt="Passeio 1" />
           <div className="card-body">
-            <h4 className="card-title">Beach Adventure</h4>
+            <h4 className="card-title">Passeio Leste</h4>
             <p className="card-text"><FaShuttleVan /> Passeios Turísticos</p>
             <p className="card-text"><FaClock /> Guia Turístico</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 09 pessoas</p>
@@ -29,9 +29,9 @@ const Benefits = () => {
           </div>
         </div>
         <div className="card">
-          <img src="/img/passeio.jpg" alt="Passeio 1" />
+          <img src="/img/passeio2.jpg" alt="Passeio 1" />
           <div className="card-body">
-            <h4 className="card-title">Beach Adventure</h4>
+            <h4 className="card-title">Passeio Extremo Leste</h4>
             <p className="card-text"><FaShuttleVan /> Passeios Turísticos</p>
             <p className="card-text"><FaClock /> Guia Turístico</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 09 pessoas</p>
@@ -46,9 +46,9 @@ const Benefits = () => {
           </div>
         </div>
         <div className="card">
-          <img src="/img/passeio.jpg" alt="Passeio 1" />
+          <img src="/img/passeio3.jpg" alt="Passeio 1" />
           <div className="card-body">
-            <h4 className="card-title">Beach Adventure</h4>
+            <h4 className="card-title">Passeio Oeste</h4>
             <p className="card-text"><FaShuttleVan /> Passeios Turísticos</p>
             <p className="card-text"><FaClock /> Guia Turístico</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 09 pessoas</p>
@@ -71,7 +71,7 @@ const Benefits = () => {
         <div className="card">
           <img src="/img/transfer.jpg" alt="Translado 1" />
           <div className="card-body">
-            <h4 className="card-title">Aeroporto - Hotel</h4>
+            <h4 className="card-title">Fortaleza  - Jericoacoara</h4>
             <p className="card-text"><FaShuttleVan /> Veículo Confortável</p>
             <p className="card-text"><FaClock /> Motorista Experiente</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 04 pessoas</p>
@@ -88,7 +88,7 @@ const Benefits = () => {
           <div className="card">
           <img src="/img/transfer.jpg" alt="Translado 1" />
           <div className="card-body">
-            <h4 className="card-title">Aeroporto - Hotel</h4>
+            <h4 className="card-title">Jijoca - Vila de Jeri</h4>
             <p className="card-text"><FaShuttleVan /> Veículo Confortável</p>
             <p className="card-text"><FaClock /> Motorista Experiente</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 04 pessoas</p>
@@ -105,7 +105,7 @@ const Benefits = () => {
         <div className="card">
           <img src="/img/transfer.jpg" alt="Translado 1" />
           <div className="card-body">
-            <h4 className="card-title">Aeroporto - Hotel</h4>
+            <h4 className="card-title">Jericoacoara - Fortaleza</h4>
             <p className="card-text"><FaShuttleVan /> Veículo Confortável</p>
             <p className="card-text"><FaClock /> Motorista Experiente</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 04 pessoas</p>

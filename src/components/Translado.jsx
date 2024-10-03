@@ -17,7 +17,7 @@ const Translado = () => {
             <p className="card-text"><FaClock /> Motorista Experiente</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 04 pessoas</p>
             <a 
-              href="#"
+              href=""
               className="page-button" 
               target="_blank"
               rel="noopener noreferrer"
@@ -30,12 +30,12 @@ const Translado = () => {
         <div className="card">
           <img src="/img/transfer.jpg" alt="Translado 2" />
           <div className="card-body">
-            <h4 className="card-title">Hotel - Aeroporto</h4>
+            <h4 className="card-title">Fortaleza  - Jericoacoara</h4>
             <p className="card-text"><FaShuttleVan /> Veículo Confortável</p>
             <p className="card-text"><FaClock /> Motorista Experiente</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 04 pessoas</p>
             <a 
-              href="https://api.whatsapp.com/send/?phone=5588981692600&text&type=phone_number&app_absent=0"
+              href=""
               className="page-button" 
               target="_blank"
               rel="noopener noreferrer"
@@ -46,6 +46,41 @@ const Translado = () => {
         </div>
 
         {/* Adicione mais 4 cards como este */}
+        <div className="card">
+          <img src="/img/transfer.jpg" alt="Translado 2" />
+          <div className="card-body">
+            <h4 className="card-title">Jijoca - Vila de Jeri</h4>
+            <p className="card-text"><FaShuttleVan /> Veículo Confortável</p>
+            <p className="card-text"><FaClock /> Motorista Experiente</p>
+            <p className="card-text"><FaUserFriends /> Capacidade: 04 pessoas</p>
+            <a 
+              href=""
+              className="page-button" 
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Reserve agora
+            </a>
+          </div>
+        </div>
+
+        <div className="card">
+          <img src="/img/transfer.jpg" alt="Translado 2" />
+          <div className="card-body">
+            <h4 className="card-title">Personalizado</h4>
+            <p className="card-text"><FaShuttleVan /> Veículo Confortável</p>
+            <p className="card-text"><FaClock /> Motorista Experiente</p>
+            <p className="card-text"><FaUserFriends /> Capacidade: 04 pessoas</p>
+            <a 
+              href=""
+              className="page-button" 
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Reserve agora
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
