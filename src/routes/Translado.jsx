@@ -3,6 +3,8 @@ import React from 'react';
 import '../css/Translado.css';
 import { FaUserFriends, FaClock, FaShuttleVan } from 'react-icons/fa';
 
+
+  var contatoWpp  = {contatoWpp}
 const Translado = () => {
   return (
     <div className="page-container">
@@ -17,7 +19,7 @@ const Translado = () => {
             <p className="card-text"><FaClock /> Motorista Experiente</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 04 pessoas</p>
             <a 
-              href="https://wa.me/SEU_NUMERO?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva."
+                href={contatoWpp}
               className="page-button" 
               target="_blank"
               rel="noopener noreferrer"
@@ -35,7 +37,7 @@ const Translado = () => {
             <p className="card-text"><FaClock /> Motorista Experiente</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 04 pessoas</p>
             <a 
-              href="https://wa.me/SEU_NUMERO?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva."
+                href={contatoWpp}
               className="page-button" 
               target="_blank"
               rel="noopener noreferrer"
@@ -53,7 +55,7 @@ const Translado = () => {
             <p className="card-text"><FaClock /> Motorista Experiente</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 04 pessoas</p>
             <a 
-              href="https://wa.me/SEU_NUMERO?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva."
+                href={contatoWpp}
               className="page-button" 
               target="_blank"
               rel="noopener noreferrer"
@@ -71,7 +73,7 @@ const Translado = () => {
             <p className="card-text"><FaClock /> Motorista Experiente</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 04 pessoas</p>
             <a 
-              href="https://wa.me/SEU_NUMERO?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva."
+                href={contatoWpp}
               className="page-button" 
               target="_blank"
               rel="noopener noreferrer"

@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import '../css/Navbar.css';
 import { FaBars, FaTimes } from 'react-icons/fa'; 
 
+var contatoWpp  = "https://wa.me/SEU_NUMERO?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva."
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); 
 
@@ -11,14 +12,14 @@ const Navbar = () => {
   };
 
   const closeMenu = () => {
-    setIsMenuOpen(false); // Fecha o menu
+    setIsMenuOpen(false); 
   };
 
   return (
     <nav className="navbar">
       <div className="logo">
         <NavLink to="/">
-          <img src="/img/logo.png" alt="Logo" />
+          <img src="/img/logo.jpg" alt="Logo" />
         </NavLink>
       </div>
       <button className="menu-toggle" onClick={toggleMenu}>
@@ -29,7 +30,7 @@ const Navbar = () => {
           <NavLink 
             to="/" 
             className={({ isActive }) => (isActive ? "active-link" : "")}
-            onClick={closeMenu} // Fecha o menu ao clicar
+            onClick={closeMenu} 
           >
             Home
           </NavLink>
@@ -75,7 +76,7 @@ const Navbar = () => {
         </li>
       </ul>
       <a 
-        href="https://wa.me/SEU_NUMERO?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva." 
+        href={contatoWpp} 
         target="_blank" 
         rel="noopener noreferrer"
       >
