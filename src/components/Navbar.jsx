@@ -23,67 +23,44 @@ const Navbar = () => {
         </NavLink>
       </div>
       <button className="menu-toggle" onClick={toggleMenu}>
-        {isMenuOpen ? <FaTimes /> : <FaBars />} 
+        {isMenuOpen ? <FaTimes /> : <FaBars />}
       </button>
-      <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-        <li>
-          <NavLink 
-            to="/" 
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-            onClick={closeMenu} 
-          >
-            Home
-          </NavLink>
-        </li>
+      <div className="nav-container">
+        <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+          <li>
+            <NavLink to="/" className={({ isActive }) => (isActive ? "active-link" : "")} onClick={closeMenu}>
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/passeios" className={({ isActive }) => (isActive ? "active-link" : "")} onClick={closeMenu}>
+              Passeios
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/translado" className={({ isActive }) => (isActive ? "active-link" : "")} onClick={closeMenu}>
+              Translado
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/sobre" className={({ isActive }) => (isActive ? "active-link" : "")} onClick={closeMenu}>
+              Sobre
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/contato" className={({ isActive }) => (isActive ? "active-link" : "")} onClick={closeMenu}>
+              Contato
+            </NavLink>
+          </li>
+        </ul>
 
-        <li>
-          <NavLink 
-            to="/passeios" 
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-            onClick={closeMenu} // Fecha o menu ao clicar
-          >
-            Passeios
-          </NavLink>
-        </li>
-        
-        <li>
-          <NavLink 
-            to="/translado" 
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-            onClick={closeMenu} // Fecha o menu ao clicar
-          >
-            Translado
-          </NavLink>
-        </li>
-
-        <li>
-          <NavLink 
-            to="/sobre" 
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-            onClick={closeMenu} // Fecha o menu ao clicar
-          >
-            Sobre
-          </NavLink>
-        </li>
-        <li>
-          <NavLink 
-            to="/contato" 
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-            onClick={closeMenu} // Fecha o menu ao clicar
-          >
-            Contato
-          </NavLink>
-        </li>
-      </ul>
-      <a 
-        href={contatoWpp} 
-        target="_blank" 
-        rel="noopener noreferrer"
-      >
-        <button className="navbar-button">Reservar</button>
-      </a>
+        <a href={contatoWpp} target="_blank" rel="noopener noreferrer">
+          <button className="navbar-button">Reservar</button>
+        </a>
+      </div>
     </nav>
   );
-};
+  };
+  
 
 export default Navbar;

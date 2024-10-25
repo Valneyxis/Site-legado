@@ -1,10 +1,10 @@
 // src/components/Translado.js
 import React from 'react';
 import '../css/Translado.css';
-import { FaUserFriends, FaClock, FaShuttleVan } from 'react-icons/fa';
+import { FaUserFriends, FaClock, FaShuttleVan,FaUsers } from 'react-icons/fa';
 
 
-  var contatoWpp  = {contatoWpp}
+var contatoWpp  = "https://wa.me/SEU_NUMERO?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva."
 const Translado = () => {
   return (
     <div className="page-container">
@@ -15,8 +15,9 @@ const Translado = () => {
           <img src="/img/transfer.jpg" alt="Translado 1" />
           <div className="card-body">
             <h4 className="card-title">Aeroporto - Hotel</h4>
-            <p className="card-text"><FaShuttleVan /> Veículo Confortável</p>
-            <p className="card-text"><FaClock /> Motorista Experiente</p>
+            <p className="card-text"><FaShuttleVan /> Hilux 4x4</p>
+            <p className="card-text"><FaClock /> 4h30min de viagem</p>
+            <p className="card-text"><FaUsers /> Privativo e Compartilhado</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 04 pessoas</p>
             <a 
                 href={contatoWpp}
@@ -33,8 +34,9 @@ const Translado = () => {
           <img src="/img/transfer.jpg" alt="Translado 2" />
           <div className="card-body">
             <h4 className="card-title">Fortaleza  - Jericoacoara</h4>
-            <p className="card-text"><FaShuttleVan /> Veículo Confortável</p>
-            <p className="card-text"><FaClock /> Motorista Experiente</p>
+            <p className="card-text"><FaShuttleVan /> Hilux 4x4</p>
+            <p className="card-text"><FaClock /> 4h30min de viagem</p>
+            <p className="card-text"><FaUsers /> Privativo e Compartilhado</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 04 pessoas</p>
             <a 
                 href={contatoWpp}
@@ -51,8 +53,9 @@ const Translado = () => {
           <img src="/img/transfer.jpg" alt="Translado 2" />
           <div className="card-body">
             <h4 className="card-title">Jijoca - Vila de Jeri</h4>
-            <p className="card-text"><FaShuttleVan /> Veículo Confortável</p>
-            <p className="card-text"><FaClock /> Motorista Experiente</p>
+            <p className="card-text"><FaShuttleVan /> Hilux 4x4</p>
+            <p className="card-text"><FaClock /> 4h30min de viagem</p>
+            <p className="card-text"><FaUsers /> Privativo e Compartilhado</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 04 pessoas</p>
             <a 
                 href={contatoWpp}
@@ -69,8 +72,9 @@ const Translado = () => {
           <img src="/img/transfer.jpg" alt="Translado 2" />
           <div className="card-body">
             <h4 className="card-title">Personalizado</h4>
-            <p className="card-text"><FaShuttleVan /> Veículo Confortável</p>
-            <p className="card-text"><FaClock /> Motorista Experiente</p>
+            <p className="card-text"><FaShuttleVan /> Hilux 4x4</p>
+            <p className="card-text"><FaClock /> 4h30min de viagem</p>
+            <p className="card-text"><FaUsers /> Privativo e Compartilhado</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 04 pessoas</p>
             <a 
                 href={contatoWpp}

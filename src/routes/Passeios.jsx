@@ -3,7 +3,7 @@ import React from 'react';
 import '../css/Passeios.css';
 import { FaUserFriends, FaClock, FaShuttleVan } from 'react-icons/fa';
 
-var contatoWpp  = {contatoWpp}
+var contatoWpp  = "https://wa.me/SEU_NUMERO?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva."
 const Passeios = () => {
   return (
     <div className="page-container">
@@ -15,8 +15,9 @@ const Passeios = () => {
           <div className="card-body">
             <h4 className="card-title">Passeio Leste</h4>
             <p className="card-text"><FaShuttleVan /> Passeios Turísticos</p>
-            <p className="card-text"><FaClock /> Guia Turístico</p>
-            <p className="card-text"><FaUserFriends /> Capacidade: 09 pessoas</p>
+            <p className="card-text"><FaShuttleVan /> Hilux 4x4,Buggy</p>
+            <p className="card-text"><FaClock /> 6hs de passeio</p>
+            <p className="card-text"><FaUserFriends /> Capacidade: 2-9 pessoas</p>
             <a 
               href={contatoWpp}
               className="page-button" 
@@ -33,8 +34,9 @@ const Passeios = () => {
           <div className="card-body">
             <h4 className="card-title">Passeio Extremo Leste</h4>
             <p className="card-text"><FaShuttleVan /> Passeios de Aventura</p>
-            <p className="card-text"><FaClock /> Guia Turístico</p>
-            <p className="card-text"><FaUserFriends /> Capacidade: 9 pessoas</p>
+            <p className="card-text"><FaShuttleVan /> Hilux 4x4, Buggy</p>
+            <p className="card-text"><FaClock /> 6hs de passeio</p>
+            <p className="card-text"><FaUserFriends /> Capacidade: 2-9 pessoas</p>
             <a 
               href={contatoWpp}
               className="page-button" 
@@ -52,8 +54,9 @@ const Passeios = () => {
           <div className="card-body">
             <h4 className="card-title">Passeio Oeste</h4>
             <p className="card-text"><FaShuttleVan /> Passeios de Aventura</p>
-            <p className="card-text"><FaClock /> Guia Turístico</p>
-            <p className="card-text"><FaUserFriends /> Capacidade: 9 pessoas</p>
+            <p className="card-text"><FaShuttleVan /> Quadriciclo, Buggy</p>
+            <p className="card-text"><FaClock /> 6hs de passeio</p>
+            <p className="card-text"><FaUserFriends /> Capacidade: 2-4 pessoas</p>
             <a 
               href={contatoWpp}
               className="page-button" 
@@ -70,8 +73,9 @@ const Passeios = () => {
           <div className="card-body">
             <h4 className="card-title">Personalizado</h4>
             <p className="card-text"><FaShuttleVan /> Passeios de Aventura</p>
-            <p className="card-text"><FaClock /> Guia Turístico</p>
-            <p className="card-text"><FaUserFriends /> Capacidade: 12 pessoas</p>
+            <p className="card-text"><FaShuttleVan /> Hilux 4x4, Buggy</p>
+            <p className="card-text"><FaClock /> 6hs de passeio</p>
+            <p className="card-text"><FaUserFriends /> Capacidade: 4-9 pessoas</p>
             <a 
               href={contatoWpp}
               className="page-button" 
