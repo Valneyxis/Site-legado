@@ -47,9 +47,44 @@
   color: #ff5733;
 }
 
-@media (min-width: 600px) {
+/* Ajustes para telas pequenas */
+@media (max-width: 768px) {
   .footer-content {
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-info h4 {
+    font-size: 1.1rem;
+  }
+
+  .footer-info p {
+    font-size: 0.85rem;
+  }
+
+  .social-links a {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-info h4 {
+    font-size: 1rem;
+  }
+  .footer-rights,
+  .footer-credits {
+    font-size: 0.8rem;
+  }
+  .footer-info p {
+    margin-right: 60px;
+  }
+
+  .social-links {
+    gap: 8px;
+    margin-left: 60px;
+  }
+
+  .social-links a {
+    font-size: 1rem;
   }
 }
