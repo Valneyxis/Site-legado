@@ -4,7 +4,7 @@ import '../css/Translado.css';
 import { FaUserFriends, FaClock, FaShuttleVan,FaUsers } from 'react-icons/fa';
 
 
-var contatoWpp  = "https://wa.me/SEU_NUMERO?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva."
+var contatoWpp  = "https://wa.me/+558596353617?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva."
 const Translado = () => {
   return (
     <div className="page-container">
@@ -12,7 +12,7 @@ const Translado = () => {
       <p>Oferecemos serviços de translado confortáveis e seguros para diversos destinos.</p>
       <div className="cards-container">
         <div className="card">
-          <img src="/img/transfer.jpg" alt="Translado 1" />
+          <img src="/img/transfer2.jpg" alt="Translado 1" />
           <div className="card-body">
             <h4 className="card-title">Aeroporto - Hotel</h4>
             <p className="card-text"><FaShuttleVan /> Hilux 4x4</p>
@@ -31,7 +31,7 @@ const Translado = () => {
         </div>
 
         <div className="card">
-          <img src="/img/transfer.jpg" alt="Translado 2" />
+          <img src="/img/transfer2.jpg" alt="Translado 2" />
           <div className="card-body">
             <h4 className="card-title">Fortaleza  - Jericoacoara</h4>
             <p className="card-text"><FaShuttleVan /> Hilux 4x4</p>

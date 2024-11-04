@@ -3,7 +3,7 @@ import React from 'react';
 import '../css/Passeios.css';
 import { FaUserFriends, FaClock, FaShuttleVan } from 'react-icons/fa';
 
-var contatoWpp  = "https://wa.me/SEU_NUMERO?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva."
+var contatoWpp  = "https://wa.me/+558596353617?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva."
 const Passeios = () => {
   return (
     <div className="page-container">

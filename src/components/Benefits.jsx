@@ -2,7 +2,7 @@ import React from 'react';
 import '../css/Benefits.css';
 import { FaUserFriends, FaClock, FaShuttleVan,FaUsers  } from 'react-icons/fa';
 
-var contatoWpp  = "https://wa.me/SEU_NUMERO?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva."
+var contatoWpp  = "https://wa.me/+558596353617?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva."
 const Benefits = () => {
   return (
     <section className="benefits" id="benefits" data-aos="fade-up">
@@ -11,7 +11,7 @@ const Benefits = () => {
         <h3>Translados</h3>
         <div className="benefit-cards">
         <div className="card">
-          <img src="/img/transfer.jpg" alt="Translado 1" />
+          <img src="/img/transfer2.jpg" alt="Translado 1" />
           <div className="card-body">
             <h4 className="card-title">Fortaleza  - Jericoacoara</h4>
             <p className="card-text"><FaShuttleVan /> Hilux 4x4</p>
@@ -33,7 +33,7 @@ const Benefits = () => {
           <div className="card-body">
             <h4 className="card-title">Jijoca - Vila de Jeri</h4>
             <p className="card-text"><FaShuttleVan /> Hilux 4x4</p>
-            <p className="card-text"><FaClock /> 50min de viagem</p>
+            <p className="card-text"><FaClock /> 40min de viagem</p>
             <p className="card-text"><FaUsers /> Privativo e Compartilhado</p>
             <p className="card-text"><FaUserFriends /> Capacidade: 04 pessoas</p>
             <a 
@@ -47,7 +47,7 @@ const Benefits = () => {
           </div>
         </div>
         <div className="card">
-          <img src="/img/transfer.jpg" alt="Translado 1" />
+          <img src="/img/transfer2.jpg" alt="Translado 1" />
           <div className="card-body">
             <h4 className="card-title">Jericoacoara - Fortaleza</h4>
             <p className="card-text"><FaShuttleVan /> Hilux 4x4</p>

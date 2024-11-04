@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import '../css/Navbar.css';
 import { FaBars, FaTimes } from 'react-icons/fa'; 
 
-var contatoWpp  = "https://wa.me/SEU_NUMERO?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva."
+var contatoWpp  = "https://wa.me/+558596353617?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva."
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); 
 
