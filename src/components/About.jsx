@@ -7,7 +7,7 @@ const About = () => {
     <section className="about" id="about" data-aos="fade-up">
       <div className="about-container">
         <div className="about-image">
-          <img src="/img/men.jpg" alt="Sobre nós" />
+          <img src="/img/men.png" alt="Sobre nós" />
         </div>
         <div className="about-content">
           <h2>Sobre Nós</h2>

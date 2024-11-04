@@ -9,7 +9,7 @@ import Translado from './routes/Translado';
 import About from './components/About'; 
 import Sobre from './routes/Sobre'; 
 import ContactForm from './routes/ContactForm';
-import NotFound from './routes/NotFound'; 
+import NotFound from './routes/NotFound';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

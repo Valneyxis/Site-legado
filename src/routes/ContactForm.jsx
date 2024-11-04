@@ -1,93 +1,72 @@
 // src/components/ContactForm.js
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import { db } from '../firebase'; 
+import { collection, addDoc } from 'firebase/firestore'; 
 import '../css/ContactForm.css';
+import Map from '../Map';
+import InputMask from 'react-input-mask'; 
+
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-    rating: 0,
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      message: '',
+      rating: 0,
+      phone: '',
+    },
+    validationSchema: Yup.object({
+      name: Yup.string().required('Nome é obrigatório'),
+      email: Yup.string().email('E-mail inválido').required('E-mail é obrigatório'),
+      message: Yup.string().required('Mensagem é obrigatória'),
+      rating: Yup.number().required('Por favor, avalie nosso serviço').min(1, 'Selecione uma avaliação'),
+      phone: Yup.string()
+      .matches(/^\(\d{2}\) \d{5}-\d{4}$/, 'Telefone inválido')
+      .required('Telefone é obrigatório'),
+    }),
+    onSubmit: async (values) => {
+      try {
+        // Adicionar a mensagem ao Firestore
+        await addDoc(collection(db, 'messages'), {
+          ...values,
+          createdAt: new Date(),
+        });
+        resetForm();
+        alert('Obrigado pela sua mensagem! Entraremos em contato em breve.');
+      } catch (error) {
+        console.error('Erro ao enviar mensagem: ', error);
+      }
+    },
   });
-  const [errors, setErrors] = useState({});
-  const [formSubmitted, setFormSubmitted] = useState(false);
-
-  const validateEmail = (email) => {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-  };
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleRating = (value) => {
-    setFormData((prevData) => ({ ...prevData, rating: value }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const { name, email, message, rating } = formData;
-
-    const newErrors = {};
-    if (!name) newErrors.name = 'Nome é obrigatório';
-    if (!email) {
-      newErrors.email = 'E-mail é obrigatório';
-    } else if (!validateEmail(email)) {
-      newErrors.email = 'E-mail inválido';
-    }
-    if (!message) newErrors.message = 'Mensagem é obrigatória';
-    if (!rating) newErrors.rating = 'Por favor, avalie nosso serviço';
-
-    setErrors(newErrors);
-
-    if (Object.keys(newErrors).length === 0) {
-      setFormSubmitted(true);
-      console.log('Formulário enviado:', formData);
-
-      resetForm();
-    }
-  };
 
   const resetForm = () => {
-    setFormData({ name: '', email: '', message: '', rating: 0 });
-    setErrors({});
+    formik.resetForm();
   };
 
-  useEffect(() => {
-    if (formSubmitted) {
-      const timer = setTimeout(() => {
-        setFormSubmitted(false);
-      }, 3000);
-      return () => clearTimeout(timer);
-    }
-  }, [formSubmitted]);
-
   return (
-    <div className="contact-form">
-      <h2>Entre em contato</h2>
-      {formSubmitted ? (
-        <div className="success-message" aria-live="polite">
-          <h4>Obrigado pela sua mensagem!</h4>
-          <p>Entraremos em contato em breve.</p>
-        </div>
-      ) : (
-        <form onSubmit={handleSubmit}>
+    <div className="contact-container">
+      <div className="map-container">
+        <Map />
+      </div>
+
+      <div className="contact-form">
+        <h2>Entre em contato</h2>
+        <form onSubmit={formik.handleSubmit} noValidate>
           <div className="form-group">
             <label htmlFor="name">Nome:</label>
             <input
               type="text"
               id="name"
               name="name"
-              value={formData.name}
-              onChange={handleInputChange}
-              className={errors.name ? 'error-input' : ''}
+              value={formik.values.name}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              className={formik.touched.name && formik.errors.name ? 'error-input' : ''}
             />
-            {errors.name && <span className="error-text">{errors.name}</span>}
+            {formik.touched.name && formik.errors.name && <span className="error-text">{formik.errors.name}</span>}
           </div>
 
           <div className="form-group">
@@ -96,12 +75,31 @@ const ContactForm = () => {
               type="email"
               id="email"
               name="email"
-              value={formData.email}
-              onChange={handleInputChange}
-              className={errors.email ? 'error-input' : ''}
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              className={formik.touched.email && formik.errors.email ? 'error-input' : ''}
             />
-            {errors.email && <span className="error-text">{errors.email}</span>}
+            {formik.touched.email && formik.errors.email && <span className="error-text">{formik.errors.email}</span>}
           </div>
+
+          <div className="form-group">
+            <label htmlFor="phone">Telefone:</label>
+              <InputMask
+                mask="(99) 99999-9999"
+                id="phone"
+                name="phone"
+                value={formik.values.phone}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                className={formik.touched.phone && formik.errors.phone ? 'error-input' : ''}
+              >
+            {(inputProps) => <input {...inputProps} type="text" />}
+            </InputMask>
+            {formik.touched.phone && formik.errors.phone && (
+            <span className="error-text">{formik.errors.phone}</span>
+        )}
+        </div>
 
           <div className="form-group">
             <label htmlFor="message">Mensagem:</label>
@@ -109,11 +107,12 @@ const ContactForm = () => {
               id="message"
               name="message"
               rows="5"
-              value={formData.message}
-              onChange={handleInputChange}
-              className={errors.message ? 'error-input' : ''}
+              value={formik.values.message}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              className={formik.touched.message && formik.errors.message ? 'error-input' : ''}
             />
-            {errors.message && <span className="error-text">{errors.message}</span>}
+            {formik.touched.message && formik.errors.message && <span className="error-text">{formik.errors.message}</span>}
           </div>
 
           <div className="form-group">
@@ -122,24 +121,25 @@ const ContactForm = () => {
               {[1, 2, 3, 4, 5].map((star) => (
                 <span
                   key={star}
-                  className={formData.rating >= star ? 'star filled' : 'star'}
-                  onClick={() => handleRating(star)}
+                  className={`star ${formik.values.rating >= star ? 'filled' : ''}`}
+                  onClick={() => formik.setFieldValue('rating', star)}
                   role="button"
+                  aria-label={`Avaliação de ${star} estrelas`}
                   tabIndex={0}
-                  onKeyPress={() => handleRating(star)} 
+                  onKeyPress={() => formik.setFieldValue('rating', star)}
                 >
                   ★
                 </span>
               ))}
             </div>
-            {errors.rating && <span className="error-text">{errors.rating}</span>}
+            {formik.touched.rating && formik.errors.rating && <span className="error-text">{formik.errors.rating}</span>}
           </div>
 
           <button type="submit" className="submit-button">
             Enviar
           </button>
         </form>
-      )}
+      </div>
     </div>
   );
 };

@@ -8,7 +8,7 @@ const Sobre = () => {
       <h2>Sobre Nós</h2>
       <div className="sobre-content">
         <div className="sobre-image">
-          <img src="/img/men.jpg" alt="Dono da Empresa" />
+          <img src="/img/men.png" alt="Dono da Empresa" />
         </div>
         <div className="sobre-text">
           <p>
@@ -19,14 +19,14 @@ const Sobre = () => {
             preocupações.
           </p>
           <p>
-            Com mais de 10 anos de atuação, temos o compromisso de oferecer serviços de alta 
+            Temos o compromisso de oferecer serviços de alta 
             qualidade, garantindo segurança e satisfação em cada etapa de seu passeio ou translado.
             Nosso diferencial é a proximidade com nossos clientes, entendendo e atendendo seus 
             desejos de forma única e exclusiva.
           </p>
           <h3>Nossos Valores</h3>
           <ul className="sobre-values">
-            <li><strong>Experiência:</strong> Mais de 10 anos no mercado, com conhecimento aprofundado na região.</li>
+            <li><strong>Experiência:</strong> Anos no mercado, com conhecimento aprofundado na região.</li>
             <li><strong>Qualidade:</strong> Excelência nos serviços, priorizando o conforto e a satisfação dos clientes.</li>
             <li><strong>Segurança:</strong> Nossas operações garantem total segurança em cada translado ou passeio.</li>
           </ul>

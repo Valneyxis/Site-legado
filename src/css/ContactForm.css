@@ -1,136 +1,180 @@
 /* ContactForm.css */
+
+/* Container principal */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização do mapa */
+.map-container {
+  flex: 1 1 50%;
+  min-height: 300px;
+  margin-bottom: 1.5rem;
+  margin-top: 7.0rem;
+}
+
 .contact-form {
-  width: 90%; 
-  max-width: 400px; 
+  flex: 1 1 100%;
+  max-width: 600px;
   margin: 0 auto;
-  background-color: #f9f9f9; 
-  padding: 15px; 
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
-  color: #333;
 }
 
 .contact-form h2 {
-  margin-bottom: 10px; 
-  font-size: 1.5rem; 
-  font-weight: 600;
-  text-align: center;
   color: #333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
+/* Estilo para mensagens de sucesso */
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Grupo de formulários */
 .form-group {
-  margin-bottom: 10px; 
   display: flex;
   flex-direction: column;
+  margin-bottom: 1rem;
 }
 
 .form-group label {
-  font-size: 0.9rem; 
-  font-weight: 500;
-  margin-bottom: 5px;
-  color: #666;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #555;
 }
 
-.form-group input,
+/* Campos de entrada */
+.form-group input[type="text"],
+.form-group input[type="email"],
 .form-group textarea {
-  width: 95%; 
-  padding: 10px; 
-  border: 1px solid #ddd; 
-  border-radius: 6px;
-  background-color: #fff;
-  font-size: 0.9rem; 
-  color: #333;
-  transition: border-color 0.2s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: #ff6b6b; 
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   outline: none;
+  transition: border-color 0.3s ease;
 }
 
-.form-group textarea {
-  resize: vertical;
-  min-height: 100px; 
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+  border-color: #ff6b6b;
 }
 
-.form-group input.error-input,
-.form-group textarea.error-input {
+/* Estilo para campos de erro */
+.error-input {
   border-color: #e74c3c;
-  background-color: #ffecec;
 }
 
 .error-text {
   color: #e74c3c;
-  font-size: 0.8rem; 
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
 }
 
+/* Avaliação com estrelas */
 .rating {
   display: flex;
-  justify-content: center;
-  margin-bottom: 15px; 
+  gap: 0.25rem;
 }
 
 .star {
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
+  color: #ccc;
   cursor: pointer;
-  color: #ddd; 
-  transition: color 0.2s ease;
+  transition: color 0.3s ease;
 }
 
 .star.filled {
-  color: #ffc107; 
+  color: #ffcc00;
 }
 
-.star:hover {
-  color: #ffc107;
+.star:hover,
+.star:focus {
+  color: #ffbf00;
+  outline: none;
 }
 
+/* Botão de envio */
 .submit-button {
-  background-color: #ff6b6b;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
   color: #fff;
-  padding: 10px 0; 
+  background-color: #ff6b6b;
   border: none;
-  border-radius: 8px;
-  font-size: 0.9rem; 
+  border-radius: 4px;
   cursor: pointer;
-  text-align: center;
-  width: 100%; 
-  transition: background-color 0.2s ease;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
 }
 
 .submit-button:hover {
   background-color: #ff4c4c;
 }
 
-.submit-button:focus {
-  outline: none;
-}
-
-.success-message {
-  text-align: center;
-  color: #ff4c4c;
-  font-size: 1rem; 
-  background-color: #f1f1f1;
-  padding: 10px; 
-  border-radius: 8px;
-  margin-top: 15px; 
-}
-
-/* Estilos responsivos */
+/* Estilo para dispositivos móveis */
 @media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  .map-container {
+    min-height: 100px;
+    margin-top: 0.5rem; 
+  }
+
   .contact-form {
-    padding: 10px; 
+    max-width: 100%; 
+  }
+
+  .contact-form h2 {
+    font-size: 1.5rem; 
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group textarea {
+    font-size: 0.9rem; 
   }
 
   .submit-button {
-    padding: 8px; 
+    padding: 1rem; 
+  }
+}
+
+/* Estilo para telas muito pequenas */
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 0.5rem; 
   }
 
-  .rating .star {
-    font-size: 1.5rem; 
+  .contact-form h2 {
+    font-size: 1.25rem; 
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group textarea {
+    font-size: 0.8rem;
+  }
+
+  .submit-button {
+    font-size: 0.9rem; 
   }
 }
