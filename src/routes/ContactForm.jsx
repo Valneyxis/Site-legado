@@ -1,13 +1,11 @@
-// src/components/ContactForm.js
 import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { db } from '../firebase'; 
-import { collection, addDoc } from 'firebase/firestore'; 
+import { db } from '../firebase';
+import { collection, addDoc } from 'firebase/firestore';
 import '../css/ContactForm.css';
 import Map from '../Map';
-import InputMask from 'react-input-mask'; 
-
+import InputMask from 'react-input-mask';
 
 const ContactForm = () => {
   const formik = useFormik({
@@ -20,35 +18,37 @@ const ContactForm = () => {
     },
     validationSchema: Yup.object({
       name: Yup.string().required('Nome é obrigatório'),
-      email: Yup.string().email('E-mail inválido').required('E-mail é obrigatório'),
+      email: Yup.string()
+        .email('E-mail inválido')
+        .required('E-mail é obrigatório'),
       message: Yup.string().required('Mensagem é obrigatória'),
-      rating: Yup.number().required('Por favor, avalie nosso serviço').min(1, 'Selecione uma avaliação'),
+      rating: Yup.number()
+        .required('Por favor, avalie nosso serviço')
+        .min(1, 'Selecione uma avaliação'),
       phone: Yup.string()
-      .matches(/^\(\d{2}\) \d{5}-\d{4}$/, 'Telefone inválido')
-      .required('Telefone é obrigatório'),
+        .matches(/^\(\d{2}\) \d{5}-\d{4}$/, 'Telefone inválido')
+        .required('Telefone é obrigatório'),
     }),
-    onSubmit: async (values) => {
+    onSubmit: async (values, { resetForm }) => {
       try {
-        // Adicionar a mensagem ao Firestore
         await addDoc(collection(db, 'messages'), {
           ...values,
           createdAt: new Date(),
         });
-        resetForm();
         alert('Obrigado pela sua mensagem! Entraremos em contato em breve.');
+        resetForm();
       } catch (error) {
         console.error('Erro ao enviar mensagem: ', error);
       }
     },
   });
 
-  const resetForm = () => {
-    formik.resetForm();
-  };
-
   return (
     <div className="contact-container">
       <div className="map-container">
+        <div className="map-text">
+          <p>Nossa localização</p>
+        </div>
         <Map />
       </div>
 
@@ -65,8 +65,13 @@ const ContactForm = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               className={formik.touched.name && formik.errors.name ? 'error-input' : ''}
+              aria-describedby="nameError"
             />
-            {formik.touched.name && formik.errors.name && <span className="error-text">{formik.errors.name}</span>}
+            {formik.touched.name && formik.errors.name && (
+              <span id="nameError" className="error-text">
+                {formik.errors.name}
+              </span>
+            )}
           </div>
 
           <div className="form-group">
@@ -79,28 +84,35 @@ const ContactForm = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               className={formik.touched.email && formik.errors.email ? 'error-input' : ''}
+              aria-describedby="emailError"
             />
-            {formik.touched.email && formik.errors.email && <span className="error-text">{formik.errors.email}</span>}
+            {formik.touched.email && formik.errors.email && (
+              <span id="emailError" className="error-text">
+                {formik.errors.email}
+              </span>
+            )}
           </div>
 
+          {/** Input Telefone */}
           <div className="form-group">
             <label htmlFor="phone">Telefone:</label>
-              <InputMask
-                mask="(99) 99999-9999"
-                id="phone"
-                name="phone"
-                value={formik.values.phone}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                className={formik.touched.phone && formik.errors.phone ? 'error-input' : ''}
-              >
-            {(inputProps) => <input {...inputProps} type="text" />}
+            <InputMask
+              mask="(99) 99999-9999"
+              id="phone"
+              name="phone"
+              value={formik.values.phone}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              className={formik.touched.phone && formik.errors.phone ? 'error-input' : ''}
+            >
+              {(inputProps) => <input {...inputProps} type="text" />}
             </InputMask>
             {formik.touched.phone && formik.errors.phone && (
-            <span className="error-text">{formik.errors.phone}</span>
-        )}
-        </div>
+              <span className="error-text">{formik.errors.phone}</span>
+            )}
+          </div>
 
+          {/** Input Mensagem */}
           <div className="form-group">
             <label htmlFor="message">Mensagem:</label>
             <textarea
@@ -111,10 +123,16 @@ const ContactForm = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               className={formik.touched.message && formik.errors.message ? 'error-input' : ''}
+              aria-describedby="messageError"
             />
-            {formik.touched.message && formik.errors.message && <span className="error-text">{formik.errors.message}</span>}
+            {formik.touched.message && formik.errors.message && (
+              <span id="messageError" className="error-text">
+                {formik.errors.message}
+              </span>
+            )}
           </div>
 
+          {/** Avaliação */}
           <div className="form-group">
             <label>Avaliação:</label>
             <div className="rating">
@@ -132,7 +150,9 @@ const ContactForm = () => {
                 </span>
               ))}
             </div>
-            {formik.touched.rating && formik.errors.rating && <span className="error-text">{formik.errors.rating}</span>}
+            {formik.touched.rating && formik.errors.rating && (
+              <span className="error-text">{formik.errors.rating}</span>
+            )}
           </div>
 
           <button type="submit" className="submit-button">
